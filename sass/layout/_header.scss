@@ -1,0 +1,78 @@
+@use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
+
+/* Estilo del header */
+header {
+  padding: $space-10 0px;
+  .container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include center-content;
+    a {
+      color: $color-three;
+      font-size: $text-size-bt;
+    }
+
+    /* diseño del nav */
+    .container-nav {
+      ul {
+        display: flex;
+        li:first-of-type a,
+        li:nth-of-type(2) a,
+        li:nth-last-of-type(3) a,
+        li:nth-of-type(5) a,
+        li:nth-of-type(6) a {
+          text-transform: capitalize;
+        }
+
+        a:hover {
+          border-bottom: $color-four 3px solid;
+          padding-bottom: $space-6;
+        }
+
+        li:nth-of-type(4) a {
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    /* Estilos del nav del login */
+    .login {
+      display: flex;
+      align-items: center;
+      a {
+        text-transform: capitalize;
+      }
+
+      li:first-of-type a {
+        border-radius: 100%;
+        padding-top: $space-10;
+        padding-bottom: $space-4;
+        padding-left: $space-5;
+        padding-right: $space-5;
+
+        &:hover {
+          background-color: $color-eight;
+        }
+      }
+
+      li:nth-of-type(2) a {
+        color: $color-four;
+        text-decoration: underline;
+        &:hover {
+          color: $color-seven;
+        }
+      }
+
+      .orange-btn {
+        @include orange-btn;
+        padding: $space-6 $space-12;
+      }
+    }
+
+    ul {
+      gap: $space-16;
+    }
+  }
+}

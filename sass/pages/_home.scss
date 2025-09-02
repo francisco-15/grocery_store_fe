@@ -1,0 +1,10 @@
+@use "./../abstracts/variables" as *;
+@use "./../abstracts/mixins" as *;
+
+body {
+  background-image: linear-gradient(to bottom, $color-one, $color-two);
+
+  main {
+    @include center-content;
+  }
+}

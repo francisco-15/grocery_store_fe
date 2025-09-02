@@ -1,0 +1,17 @@
+@use "./../abstracts/variables" as *;
+
+/* Mixin para centar el contenido con margenes o espacios en los costados */
+@mixin center-content {
+  margin: auto;
+  max-width: 90%;
+}
+
+/* Estilo de boton naranja */
+@mixin orange-btn {
+  background-color: $color-four;
+  color: $color-one;
+  border-radius: 10px;
+  &:hover {
+    background-color: $color-seven;
+  }
+}
