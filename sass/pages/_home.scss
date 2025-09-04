@@ -6,5 +6,114 @@ body {
 
   main {
     @include center-content;
+
+    /* Estilos de color de texto más su capitalize */
+    .capitalize {
+      text-transform: capitalize;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .color-orange {
+      color: $color-four;
+    }
+
+    /* Estilo del hero */
+    #hero {
+      display: grid;
+      grid-template-columns: 35% 65%;
+
+      .container-text {
+        padding-top: $space-18;
+        grid-area: 1 / 1;
+        display: flex;
+        flex-direction: column;
+        gap: $space-13;
+
+        h1 {
+          max-width: 800px;
+          font-size: $text-size-6xl;
+        }
+
+        p {
+          color: $color-six;
+          font-size: $text-size-xl;
+          max-width: 500px;
+        }
+
+        .container-search {
+          display: flex;
+          padding-bottom: $space-13;
+
+          input,
+          button {
+            border: none;
+            height: $space-13;
+          }
+
+          input {
+            background-color: $color-nine;
+            width: 350px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+          }
+
+          input:focus {
+            outline: none;
+          }
+
+          button {
+            background-color: $color-four;
+            width: $space-15;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+
+            &:hover {
+              background-color: $color-seven;
+            }
+          }
+        }
+      }
+
+      .container-quality {
+        grid-area: 2 / 1;
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, 0.4fr);
+
+          li {
+            display: flex;
+            gap: $space-5;
+
+            span {
+              color: $color-six;
+              font-size: $text-size-bt;
+            }
+          }
+        }
+      }
+
+      .container-image {
+        grid-area: 1 / 2 / span 3 / span 1;
+      }
+    }
+
+    /* Estilos de los servicios de la web */
+    #products {
+      display: flex;
+
+      h2 {
+        font-size: $text-size-xl;
+        font-weight: 500;
+        text-transform: capitalize;
+        padding-bottom: $space-6;
+      }
+
+      p {
+        color: $color-six;
+        font-size: $text-size-bt;
+      }
+    }
   }
 }
