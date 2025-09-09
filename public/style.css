@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* variables para espaciado como: (Padding, Margin, Gap, Width, Height, etc.) */
+/* Variables para tamaño de fuente (font-size y line-height) */
+/* Variables para los colores */
+/* Variables para breakpont */
+/* variables de fuentes */
+/* Mixin para centar el contenido con margenes o espacios en los costados */
+/* Estilo de boton naranja */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", "serif";
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: "Montserrat", "sans-serif";
+}
+
+/* Estilo del header */
+header {
+  padding: 1.5rem 0px;
+}
+header .container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 90%;
+  /* diseño del nav */
+  /* Estilos del nav del login */
+}
+header .container-header a {
+  color: #bcbcbb;
+  font-size: 1.125rem;
+}
+header .container-header .container-nav ul {
+  display: flex;
+}
+header .container-header .container-nav ul li:first-of-type a,
+header .container-header .container-nav ul li:nth-of-type(2) a,
+header .container-header .container-nav ul li:nth-last-of-type(3) a,
+header .container-header .container-nav ul li:nth-of-type(5) a,
+header .container-header .container-nav ul li:nth-of-type(6) a {
+  text-transform: capitalize;
+}
+header .container-header .container-nav ul a:hover {
+  border-bottom: #f3805e 3px solid;
+  padding-bottom: 0.75rem;
+}
+header .container-header .container-nav ul li:nth-of-type(4) a {
+  text-transform: uppercase;
+}
+header .container-header .login {
+  display: flex;
+  align-items: center;
+}
+header .container-header .login a {
+  text-transform: capitalize;
+}
+header .container-header .login li:first-of-type {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container-header .login li:first-of-type:hover {
+  background-color: #e5e5e5;
+}
+header .container-header .login li:nth-of-type(2) a {
+  color: #f3805e;
+  text-decoration: underline;
+}
+header .container-header .login li:nth-of-type(2) a:hover {
+  color: #f15728;
+}
+header .container-header .login .orange-btn {
+  background-color: #f3805e;
+  color: #fbf8f7;
+  border-radius: 10px;
+  padding: 0.75rem 2rem;
+}
+header .container-header .login .orange-btn:hover {
+  background-color: #f15728;
+}
+header .container-header ul {
+  gap: 4rem;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #fbf8f7, #fefeff);
+}
+body main {
+  margin: auto;
+  max-width: 90%;
+  /* Estilos de color de texto más su capitalize */
+  /* Estilo del hero */
+  /* Estilos de los servicios de la web */
+}
+body main .capitalize {
+  text-transform: capitalize;
+}
+body main .bold {
+  font-weight: bold;
+}
+body main .color-orange {
+  color: #f3805e;
+}
+body main #hero {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+body main #hero .container-text {
+  padding-top: 6rem;
+  grid-area: 1/1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+}
+body main #hero .container-text h1 {
+  max-width: 800px;
+  font-size: 3.75rem;
+}
+body main #hero .container-text p {
+  color: #aeafaf;
+  font-size: 1.25rem;
+  max-width: 500px;
+}
+body main #hero .container-text .container-search {
+  display: flex;
+  padding-bottom: 2.75rem;
+}
+body main #hero .container-text .container-search input,
+body main #hero .container-text .container-search button {
+  border: none;
+  height: 2.75rem;
+}
+body main #hero .container-text .container-search input {
+  background-color: #f3f3f3;
+  width: 350px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+body main #hero .container-text .container-search input:focus {
+  outline: none;
+}
+body main #hero .container-text .container-search button {
+  background-color: #f3805e;
+  width: 3.5rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+body main #hero .container-text .container-search button:hover {
+  background-color: #f15728;
+}
+body main #hero .container-quality {
+  grid-area: 2/1;
+}
+body main #hero .container-quality ul {
+  display: grid;
+  grid-template-columns: repeat(2, 0.4fr);
+}
+body main #hero .container-quality ul li {
+  display: flex;
+  gap: 0.625rem;
+}
+body main #hero .container-quality ul li span {
+  color: #aeafaf;
+  font-size: 1.125rem;
+}
+body main #hero .container-image {
+  grid-area: 1/2/span 3/span 1;
+}
+body main #products {
+  display: flex;
+}
+body main #products h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-bottom: 0.75rem;
+}
+body main #products p {
+  color: #aeafaf;
+  font-size: 1.125rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
