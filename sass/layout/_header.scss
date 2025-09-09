@@ -45,15 +45,15 @@ header {
         text-transform: capitalize;
       }
 
-      li:first-of-type a {
-        border-radius: 100%;
-        padding-top: $space-10;
-        padding-bottom: $space-4;
-        padding-left: $space-5;
-        padding-right: $space-5;
-
+      li:first-of-type {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:hover {
-          background-color: $color-eight;
+          background-color: $color-ten;
         }
       }
 
